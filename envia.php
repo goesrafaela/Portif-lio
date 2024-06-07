@@ -1,5 +1,5 @@
 <?php
-
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = addslashes($_POST['nome']); 
     $email = addslashes($_POST['email']); 
     $celular = addslashes($_POST['celular']); 
@@ -9,13 +9,15 @@
 
     $corpo = "Nome: ".$nome."\n"."Email: ".$email."\n"."Celular: ".$celular;
 
-    $cabeca = "From goesrafaela.26@gmail.com"."\n"."Reply-to: ".$email."\n"."X=Mailer:/PHP".phpversion();
+    $headers = "From $email";
 
-    if(mail($para,$assunto,$corpo,$cabeca)){
+    if(mail($para,$assunto,$corpo,$headers)){
         echo("E-mail enviado com sucesso!");
     }else{
         echo("Houve um erro ao enviar o email");
     }
+}
+   
 ?>
 
 
