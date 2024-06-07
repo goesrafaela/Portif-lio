@@ -1,5 +1,4 @@
 <?php
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = addslashes($_POST['nome']); 
     $email = addslashes($_POST['email']); 
@@ -10,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $corpo = "Nome: ".$nome."\n"."Email: ".$email."\n"."Celular: ".$celular;
 
-    $headers = "From $email";
+    $headers = "From $email"."\n"."Reply-to: ".$email."\n"."X=Mailer:/PHP".phpversion();
 
     if(mail($para,$assunto,$corpo,$headers)){
         echo("E-mail enviado com sucesso!");
