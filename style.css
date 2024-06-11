@@ -6,6 +6,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #242424;
+    flex-direction: column;
+}
+
 body {
     background-color: #000;
     height: 100vh;
@@ -390,6 +399,32 @@ footer .line-footer p i {
 footer .line-footer p a {
     color: #fff;
 }
+
+/* Agradeciemtno */
+.text{
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.paragrafo{
+    color:#fff;
+    margin-bottom: 50px;
+}
+
+.btn{
+    padding: 15px 55px;
+    background: #942ad1;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.btn:hover{
+    border-radius: 16px;
+}
+
 
 /* Responsividade */
 @media screen and (max-width: 1020px) {
