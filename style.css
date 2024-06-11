@@ -270,7 +270,8 @@ section.portifolio {
 }
 
 section.portifolio .flex {
-    justify-content: space-around;
+    gap: 80px;
+    /* justify-content: space-around; */
     margin-top: 60px;
 }
 
@@ -283,6 +284,7 @@ section.portifolio .flex {
     cursor: pointer;
     border-radius: 40px;
     position: relative;
+    text-align: center;
 }
 
 .img-port:hover {
