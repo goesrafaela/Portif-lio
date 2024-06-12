@@ -372,6 +372,15 @@ form .btn-enviar input {
     transition: .2s;
 }
 
+form .line-footer p a{
+    color: #ffff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+}
+
 /* Ctrl+; - criar comentario */
 /* Estilo Rodapé */
 footer {
@@ -381,6 +390,16 @@ footer {
 
 footer .line-footer {
     padding: 20px 0;
+}
+
+footer p{
+    color: #fff;
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .borda {
@@ -398,6 +417,7 @@ footer .line-footer p i {
 
 footer .line-footer p a {
     color: #fff;
+    text-decoration: none;
 }
 
 /* Agradeciemtno */

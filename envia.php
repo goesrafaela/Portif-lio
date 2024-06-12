@@ -1,23 +1,29 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nome = addslashes($_POST['nome']); 
-    $email = addslashes($_POST['email']); 
-    $celular = addslashes($_POST['celular']); 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Dados do formulário
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
-    $para = "goes.rafaelasilva27@gmail.com";
-    $assunto = "Ideias de projetos - ProgramCenter";
+    // E-mail do destinatário
+    $to = "seu-email@dominio.com";
 
-    $corpo = "Nome: ".$nome."\n"."Email: ".$email."\n"."Celular: ".$celular;
+    // Assunto do e-mail
+    $subject = "Nova mensagem do seu portfólio";
 
-    $headers = "From $email"."\n"."Reply-to: ".$email."\n"."X=Mailer:/PHP".phpversion();
+    // Corpo do e-mail
+    $body = "Nome: $name\nEmail: $email\n\nMensagem:\n$message";
 
-    if(mail($para,$assunto,$corpo,$headers)){
-        echo("E-mail enviado com sucesso!");
-    }else{
-        echo("Houve um erro ao enviar o email");
+    // Cabeçalhos do e-mail
+    $headers = "From: $email";
+
+    // Enviar e-mail
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Mensagem enviada com sucesso!";
+    } else {
+        echo "Falha ao enviar a mensagem.";
     }
 }
-   
 ?>
 
 
